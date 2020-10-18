@@ -1,3 +1,10 @@
 module.exports = function check(str, bracketsConfig) {
-  // your solution
-}
+    let brackets = {
+        '(' : 0,
+        ')' : 0
+    };
+  for (let bracket in str) {
+    brackets[bracket] += 1;
+ }
+ return brackets['('] === brackets[')'];
+};
